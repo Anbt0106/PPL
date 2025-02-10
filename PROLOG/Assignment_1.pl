@@ -1,4 +1,3 @@
-
 female(sophia).
 female(sandra).
 female(mia).
@@ -21,16 +20,38 @@ parent(sophia, dick).
 parent(sophia, sandra).
 
 % Rule to define father relationship
-
+father(F, C) :- 
+    male(F), 
+    parent(F, C).
 
 % Rule to define sister relationship
-
+sister(S, X) :- 
+    female(S),
+    parent(P, S),
+    parent(X, S),
+    S \= X.
 
 % Rule to define grandmother relationship
+grandmother(GM, C) :- 
+    female(GM),
+    parent(GM, P),
+    parent(P, C).
 
 
 % Rule to define wife-husband relationship
-
+wife_husband(W, H) :-
+    female(W),
+    male(H),
+    parent(H, C),
+    parent(W, C).
 
 % Rule to define cousin relationship
+
+cousin(A, B) :-
+    parent(P1 , A),
+    parent(P2 , B),
+    P1 \= P2,
+    parent(GM, P1),
+    parent(GM, P2),
+    A \=B.
 
