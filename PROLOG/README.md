@@ -1,1 +1,0 @@
-Nguyên lý các ngôn ngữ lập trìnhtrình
