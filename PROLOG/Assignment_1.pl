@@ -46,7 +46,6 @@ wife_husband(W, H) :-
     parent(W, C).
 
 % Rule to define cousin relationship
-
 cousin(A, B) :-
     parent(P1 , A),
     parent(P2 , B),
@@ -54,4 +53,5 @@ cousin(A, B) :-
     parent(GM, P1),
     parent(GM, P2),
     A \=B.
+
 

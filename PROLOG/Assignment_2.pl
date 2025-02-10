@@ -43,7 +43,7 @@ surgeons_in_hanoi(X) :-
 % Find all surgeons and live in Hanoi and make over 5
 surgeons_in_hanoi_over_5(X) :-
     surgeons(X),
- %   address(X, hanoi),
+    address(X, hanoi),
     salary(X, S),
     S >= 5.
 
